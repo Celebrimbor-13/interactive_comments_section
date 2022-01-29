@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Rubik:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 50px;
+  background-color: hsl(0, 0%, 93%);
+}
+
+p {
+  color: rgb(73, 73, 73);
+}
+
+p > span {
+  color: hsl(239, 64%, 41%);
+  font-weight: 500;
+}
+
+#root {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
+.comment {
+  margin-left: 50px;
+}
+
+.comHeader {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.photoNname {
+  display: flex;
+  align-items: center;
+}
+
+.photoNname > img {
+  width: 55px;
+}
+
+.photoNname > span {
+  margin: 0 10px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.photoNname > b {
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(239, 64%, 41%);
+  padding: 1px 7px;
+  font-size: 14px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.reply,
+.deleteNedit {
+  margin-left: auto;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.reply > span {
+  margin: 0 5px;
+  color: hsl(239, 64%, 41%);
+}
+
+.deleteNedit {
+  display: flex;
+}
+
+.deleteNedit div:first-child {
+  margin: 0 5px;
+}
+.deleteNedit div:first-child > span {
+  margin: 0 2px;
+  color: hsl(358, 77%, 58%);
+}
+
+.deleteNedit div:last-child {
+  margin: 0 5px;
+}
+
+.deleteNedit div:last-child > span {
+  margin: 0 2px;
+  color: hsl(239, 64%, 41%);
+}
+
+.date {
+  margin: 0 20px;
+  font-size: 14px;
+  color: hsl(238, 18%, 70%);
+}
+
+.vote {
+  display: flex;
+  float: left;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 34px;
+  height: 100px;
+  top: 73px;
+  background-color: hsl(228, 33%, 97%);
+  border-radius: 6px;
+}
+
+.vote > p {
+  color: hsl(239, 88%, 33%);
+}
+
+.plus,
+.minus {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.containers {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 6px;
+}
+
+.replyComment {
+  width: 600px;
+  align-self: flex-end;
+  padding-left: 45px;
+  border-left: rgb(186, 185, 212) solid 1px;
+}
+
+.typeArea {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* margin-bottom: 60px; */
+}
+
+.typeArea > img {
+  width: 55px;
+}
+.allInpArea {
+  width: 400px;
+  padding: 3px 3px 65px 3px;
+  margin: 0 10px;
+  border: solid 1px rgb(167, 167, 173);
+  border-radius: 3px;
+  outline: none;
+  color: rgb(73, 73, 73);
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  resize: none;
+
+  /* overflow: hidden; */
+}
+
+.allInpArea::-webkit-scrollbar {
+  display: none;
+}
+
+.updateBtn {
+  float: right;
+  width: 80px;
+  padding: 10px 0;
+  background-color: hsl(239, 54%, 38%);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+}
+.editInpBtnDiv {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 7px;
+}
+
+.typeArea > button {
+  width: 80px;
+  padding: 10px 0;
+  background-color: hsl(239, 54%, 38%);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+}
+
+/* ++++++++++++++++++++++++++++++++ */
+
+.dialog-ovelay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.dialog-ovelay .dialog {
+  width: 300px;
+  margin: 100px auto 0;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 11;
+}
+.dialog-ovelay .dialog header {
+  padding: 15px;
+  font-size: 17px;
+}
+.dialog-ovelay .dialog header h3 {
+  font-weight: 500;
+  margin: 0;
+  color: #555;
+  display: inline-block;
+}
+
+.dialog-ovelay .dialog .dialog-msg {
+  padding: 0 15px;
+}
+.dialog-ovelay .dialog .dialog-msg p {
+  margin: 0;
+  font-size: 14px;
+  color: rgb(95, 95, 95);
+}
+.dialog-ovelay .dialog footer {
+  padding: 15px;
+  text-align: center;
+}
+.dialog-ovelay .dialog footer .controls {
+  display: flex;
+  justify-content: space-between;
+  direction: rtl;
+}
+.dialog-ovelay .dialog footer .controls .button {
+  width: 120px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.button {
+  cursor: pointer;
+}
+.button-default {
+  background-color: rgb(119, 119, 119);
+  border: none;
+  color: #ffffff;
+}
+.button-danger {
+  background-color: #e7554b;
+  border: none;
+  color: #ffffff;
+}
+
+#ownerTypeSection {
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
+  margin: 15px;
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ownerTypeSection > button {
+  width: 80px;
+  padding: 10px 0;
+  background-color: hsl(239, 54%, 38%);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+}
+
+#ownerTypeSection > img {
+  width: 55px;
+}
